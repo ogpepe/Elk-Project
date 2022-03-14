@@ -106,11 +106,7 @@ In order to use the playbooks, you will need to have an Ansible control node alr
 
 SSH into the control node and follow the steps below:
 
-- Run the [download_all.sh] script to download all the used playbooks automaticly.
-  - To download any of the above yaml files use the download_all.sh script as such:
-```sh
- 
-```
+
 - Update the etc/ansible/hosts file to include the local IP and the group name as well as the python interpreter. To specify the machine you want to Install the playbook on you need to add the group name that you entered into the hosts file into the playbook YAML file (ex. "hosts: websevers or hosts: elk")
 - Run the Web playbook to install dvwa on all three of the web servers, navigate to http://[Your.VM.Public.IP]/dvwa/setup.php to ensure the servers are up and running.
   - ansible-playbook [Web_playbook.yml]
